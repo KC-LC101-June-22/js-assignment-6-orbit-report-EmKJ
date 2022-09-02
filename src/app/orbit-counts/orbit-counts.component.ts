@@ -26,6 +26,8 @@ export class OrbitCountsComponent implements OnInit {
 	}
 	return count;
  }
-
-
+ uniqueTypes(satellites:Satellite[]){
+	let typesArr = new Set(satellites.map(i =>i.type));
+	return typesArr;
+ }
 }
